@@ -1,15 +1,12 @@
-# appsync-ws-api
+# appsync-websocket-api
 
-This AppSync example demonstrate end-to-end implementations of a simple application using AWS AppSync resolvers integration with multiple datasources.
-The example uses AWS AppSync as the front door to the client application. The client application(s) will only need to use a single GraphQL API request to send a GraphQL query to AWS AppSync. 
-In AppSync you will define the schema and resolvers. AppSync resolvers are functions that convert the GraphQL payload to the underlying storage/target service using VTL (Velocity Template Mapping).
+This AppSync example demonstrate end-to-end implementations of a simple application using AWS AppSync resolvers integration with multiple datasources. The example uses AWS AppSync as the front door to the client application. The client application(s) will only need to use a single GraphQL API request to send a GraphQL query to AWS AppSync. In AppSync you will define the schema and resolvers. AppSync resolvers are functions that convert the GraphQL payload to the underlying storage/target service using VTL (Velocity Template Mapping). 
 
-The sample uses a fictitious soccer club/players application where the end user can query their favorite soccer players, rank them and update their team score. In this use case, we will demosntrate 
-three intergation scenarios using AppSync APIs
+The sample uses a fictitious soccer club/players application where the end user can query the score and/or ranking of their favorite team and get the result in real time. In this use case, we will demosntrate the following three intergation scenarios using AppSync GraphQL API's
 
-    1- Intergate using DynamoDB resolvers to retrieve favorite soccer player names andor top 10 soccer players in the world
-    2- Websocket integration to demostarte an "out of band" initiation of a message where a message producer places a message on SQS and AppSync resolvers fetch the message from the queue and return to the client application.
-    3- Intergate with Amazon RDS using a custom AppSync resolver (Lambda function) and return data requested by the client application
+ - Intergate using DynamoDB resolvers to retrieve favorite soccer player names andor top 10 soccer players in the world
+ - Websocket integration to demostarte an "out of band" initiation of a message where a message producer places a message on SQS and AppSync resolvers fetch the message from the queue and return to the client application.
+ - Intergate with Amazon RDS using a custom AppSync resolver (Lambda function) and return data requested by the client application
     
 The sample application will use a serverless approach that align with AWS serverless best practices
     1- Solution delpoyed using CI/CD pipeline that include CodePipeline, AWS CodeCommit, and AWS CodeBuild
