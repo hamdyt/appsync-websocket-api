@@ -36,7 +36,7 @@ The sample application will create the following resources in your AWS account:
  - SAM - For IaC to automate solution deployment
     
 ## Observability configurations
-  <Place holder>
+The sample application
 
 ## Testing  
 < Place Holder>
