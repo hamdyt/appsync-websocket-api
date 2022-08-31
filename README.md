@@ -24,16 +24,16 @@ The sample application will use a serverless approach that align with AWS server
 
 The sample application will create the following resources in your AWS account: 
  - GraphQL API that uses AppSync as a front door to the sample application
-    - DynamoDB - NoSQL database to store soccer teams/players data
-    - IAM - roles and permissions for different AWS services included in the solution
-    - CloudFront - To scale the application globally and improve performance
-    - S3- Object storage for static assets (html/CSS, etc.) for the front end React application
-    - Lambda - Lambda functions used as a custom AppSync resolver to access Amazon RDS
-    - RDS - A SQL database to store soccer clubs ratings and scores
-    - SQS- queues to receive message from a message producer. Message will be sent to the client via AppSync
-    - CloudWatch- For logging and monitoring
-    - XRAY- For tracing and troubleshooting
-    - SAM - For IaC to automate solution deployment
+ - DynamoDB - NoSQL database to store soccer teams/players data
+ - IAM - roles and permissions for different AWS services included in the solution
+ - CloudFront - To scale the application globally and improve performance
+ - S3- Object storage for static assets (html/CSS, etc.) for the front end React application
+ - Lambda - Lambda functions used as a custom AppSync resolver to access Amazon RDS
+ - RDS - A SQL database to store soccer clubs ratings and scores
+ - SQS- queues to receive message from a message producer. Message will be sent to the client via AppSync
+ - CloudWatch- For logging and monitoring
+ - XRAY- For tracing and troubleshooting
+ - SAM - For IaC to automate solution deployment
     
 ## Observability configurations
   <Place holder>
