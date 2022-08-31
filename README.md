@@ -36,11 +36,8 @@ The servcies used by this sample application include:
 
 ![Architecture diagram](./assets/initial Architecture.png)
 
- ## Observability configurations
+## Observability configurations
   <Place holder>
-
-![CloudWatch Dashboard](./assets/Dashboard.png)
-<Place Holder>
 
 ## Testing  
 < Place Holder>
