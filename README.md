@@ -34,7 +34,7 @@ The servcies used by this sample application include:
     
 ## Architecture
 
-![Architecture diagram](./assets/initial Architecture.png)
+![Architecture diagram](./assets/initial_architecture.png)
 
 ## Observability configurations
   <Place holder>
