@@ -23,7 +23,7 @@ The sample application will use a serverless approach that align with AWS server
 ## Components created
 
 The sample application will create the following resources in your AWS account: 
-    - GraphQL API that uses AppSync as a front door to the sample application
+ - GraphQL API that uses AppSync as a front door to the sample application
     - DynamoDB - NoSQL database to store soccer teams/players data
     - IAM - roles and permissions for different AWS services included in the solution
     - CloudFront - To scale the application globally and improve performance
