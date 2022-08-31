@@ -39,7 +39,8 @@ The servcies used by this sample application include:
  ## Observability configurations
   <Place holder>
 
-![CloudWatch Dashboard](./assets/Dashboard.png)
+## ![CloudWatch Dashboard](./assets/Dashboard.png)
+<Place Holder>
 
 ## Testing  
 < Place Holder>
