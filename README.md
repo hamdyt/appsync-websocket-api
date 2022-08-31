@@ -36,7 +36,7 @@ The sample application will create the following resources in your AWS account:
  - SAM - For IaC to automate solution deployment
     
 ## Observability configurations
-The sample application
+The sample application will utilize CloudWatch for logging and monitoring purpsoes. This include creating alerts as appropriate as well as a single dashbaord. AWS XRAY will be used for distributed tracing as supported by a given service. 
 
 ## Testing  
 < Place Holder>
