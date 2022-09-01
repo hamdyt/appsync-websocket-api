@@ -13,7 +13,7 @@ The sample application will use a serverless approach that align with AWS server
  - IaC using SAM and CDK approaches
  - Observability: Logging & Monitoring using CloudWatch and XRAY. Including CloudWatch alarms and dashboard
  - Automated unit and integration testing
- - Glbal deployment using Amazon CloudFront and S3
+ - Global deployment using Amazon CloudFront and S3
  - Authentication/Authorization using IAM/Cognito
 
 ## Architecture
