@@ -1,0 +1,12 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "appsync-websocket-example"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-1wzha4fc50f3t"
+s3_prefix = "appsync-websocket-example"
+region = "us-east-2"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+parameter_overrides = "soccerTeamsTable=\"SoccerTeamsTable\""
+image_repositories = []

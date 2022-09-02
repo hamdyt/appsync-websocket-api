@@ -1,0 +1,54 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: API Gateway to Kinesis Data Stream to AWS Lambda Integration
+
+# This template builds integration between API Gateway, Kinesis data streams and AWS Lambda
+
+Parameters: 
+ soccerTeamsTable: 
+  Type: String
+  Default: "SoccerTeamsTable"
+  Description: "Name of the soccer teams dynamodb table"
+  
+Globals:
+  Function:
+    MemorySize: 512
+    Timeout: 100
+
+Resources:
+  # Define AppSync role to access DynamoDB
+  AppSyncDynamoDBExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - appsync.amazonaws.com
+            Action: "sts:AssumeRole"
+      Path: /
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSAppSyncPushToCloudWatchLogs
+        - arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess
+        
+  DynamoDBSoccerTable:
+    Type: 'AWS::DynamoDB::Table'
+    Properties:
+      TableName:
+        Ref: "soccerTeamsTable"
+       # A list of attributes that describe the key schema for the DynamoDB table.
+      AttributeDefinitions:
+        - AttributeName: pk
+          AttributeType: S
+      KeySchema:
+        - AttributeName: pk
+          KeyType: HASH
+      ProvisionedThroughput:
+        ReadCapacityUnits: 5
+        WriteCapacityUnits: 5
+      TimeToLiveSpecification:
+        AttributeName: TimeToLive
+        Enabled: TRUE
+  
