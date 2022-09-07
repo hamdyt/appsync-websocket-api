@@ -42,5 +42,5 @@ The sample application will utilize CloudWatch Logs and emit metrics for Request
 Each of the integration scenarios in the sample application will include unit and integration testing. Testing instructions can be found in each individual module readme.
 
 ## Deployment Methods
- Each example provides two ways to deploy resources - SAM (Serverless Application Model) and CDK deployment (v2)
+ Each example provides two ways to deploy resources - SAM (Serverless Application Model) and CDK deployment.
  
