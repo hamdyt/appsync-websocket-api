@@ -37,18 +37,23 @@ Resources:
     Type: 'AWS::DynamoDB::Table'
     Properties:
       TableName:
-        Ref: "soccerTeamsTable"
+        Ref: soccerTeamsTable
        # A list of attributes that describe the key schema for the DynamoDB table.
       AttributeDefinitions:
-        - AttributeName: pk
+        - AttributeName: player_id
+          AttributeType: S
+        - AttributeName: game_id
           AttributeType: S
       KeySchema:
-        - AttributeName: pk
+        - AttributeName: player_id
           KeyType: HASH
+        - AttributeName: game_id
+          KeyType: RANGE
       ProvisionedThroughput:
         ReadCapacityUnits: 5
         WriteCapacityUnits: 5
       TimeToLiveSpecification:
         AttributeName: TimeToLive
         Enabled: TRUE
+      BillingMode: PAY_PER_REQUEST
   
